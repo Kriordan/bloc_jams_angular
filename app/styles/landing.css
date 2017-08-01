@@ -1,0 +1,44 @@
+.landing {
+	background-color: rgb(58,23,63);
+}
+.hero {
+	background-image: url(../assets/images/bloc_jams_bg.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 600px;
+	position: relative;
+}
+.hero-title {
+	font-size: 4rem;
+	font-weight: 300;
+	letter-spacing: .5rem;
+	position: absolute;
+	text-align: center;
+	text-shadow: 1px 1px 0px rgb(58,23,63);
+	text-transform: uppercase;
+	top: 40%;
+	transform: translateY(-50%);
+	width: 100%;
+}
+.selling-points {
+	position: relative;
+}
+.point {
+	padding: 2rem;
+	position: relative;
+	text-align: center;
+	opacity: 0;
+	transform: scaleX(.5) translateY(-6rem) rotateX(180deg);
+	transition: all 1s ease-in;
+	transition-delay: .2s;
+}
+.point-title {
+	font-size: 1.25rem;
+}
+.ion-music-note,
+.ion-radio-waves,
+.ion-iphone {
+	color: rgb(233,50,117);
+	font-size: 5rem;
+}
