@@ -15,16 +15,16 @@
 </head>
 <body>
   <nav class="navbar">
-    <a href="index.html" class="logo">
+    <a ui-sref="landing" class="logo">
       <img src="assets/images/bloc_jams_logo.png" alt="Bloc Jams logo">
     </a>
     <div class="links-container">
-      <a href="collection.html" class="navbar-link">collection</a>
+      <a ui-sref="collection" class="navbar-link">collection</a>
     </div>
   </nav>
-  <h4>Hello, World???</h4>
-  {{ 2 + 2 }}
+  <ui-view></ui-view>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
   <script src="/scripts/app.js"></script>
 </body>
 </html>
