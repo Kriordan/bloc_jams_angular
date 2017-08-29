@@ -21,7 +21,7 @@
     <div class="control-group currently-playing">
       <h2 class="song-name">{{ playerBar.songPlayer.currentSong.title }}</h2>
       <div class="seek-control">
-        <seek-bar></seek-bar>
+        <seek-bar value="{{ playerBar.songPlayer.currentTime }}" max="{{ playerBar.songPlayer.currentSong.duration }}" on-change="playerBar.songPlayer.setCurrentTime(value)"></seek-bar>
         <div class="current-time">2:30</div>
         <div class="total-time">{{ playerBar.songPlayer.currentSong.duration}}</div>
       </div>
