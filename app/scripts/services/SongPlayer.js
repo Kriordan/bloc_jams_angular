@@ -17,7 +17,6 @@
     */
     var currentBuzzObject = null;
 
-
     //////
     /// Private Functions
 
@@ -33,7 +32,7 @@
       }
 
       currentBuzzObject = new buzz.sound(song.audioUrl, {
-        formats: [ 'mp3' ],
+        formats: ['mp3'],
         preload: true
       });
 
@@ -74,7 +73,6 @@
       return currentAlbum.songs.indexOf(song);
     };
 
-
     //////
     /// Public Attributes
 
@@ -90,6 +88,11 @@
     */
     SongPlayer.currentTime = null;
 
+    /**
+    * @desc Current volume
+    * @type {Number}
+    */
+    SongPlayer.volume = 70;
 
     //////
     /// Public Functions
@@ -120,7 +123,7 @@
       song = song || SongPlayer.currentSong;
       currentBuzzObject.pause();
       song.playing = false;
-    }
+    };
 
     /**
     * @function previous
@@ -167,10 +170,20 @@
       }
     };
 
+    /**
+    * @function setVolume
+    * @desc Set current volume of songs
+    * @param {Number} volume
+    */
+    SongPlayer.setVolume = function(volume) {
+      if (currentBuzzObject) {
+        currentBuzzObject.setVolume(volume);
+      }
+      SongPlayer.volume = volume;
+    };
+
     return SongPlayer;
   }
 
-  angular
-    .module('blocJams')
-    .factory('SongPlayer', ['$rootScope', 'Fixtures', SongPlayer]);
+  angular.module('blocJams').factory('SongPlayer', ['$rootScope', 'Fixtures', SongPlayer]);
 })();
